@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Page</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Kumbh+Sans:wght@700&display=swap" rel="stylesheet">
+<title>Vendo Todo Por Mudanza</title>
+  <link rel="stylesheet" href="global.css">
+  <style id="sections-styles">
+/* CSS for section section:Header */
+.site-header {
+    background-color: var(--color-background);
+    border-bottom: 1px solid #f3f4f6;
+    box-shadow: 0px 1px 2px -1px rgba(0, 0, 0, 0.1), 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+    padding: 16px 0;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .header-logo {
+    width: 32px;
+    height: 32px;
+  }
+
+  .header-title {
+    color: var(--color-primary);
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -1.13px;
+  }
+
+/* CSS for section section:Hero */
+.hero-section {
+    position: relative;
+    height: 484px;
+    overflow: hidden;
+    background-color: #f3f4f6;
+  }
+
+  .hero-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+  }
+
+  /* Only show the first image by default */
+  .hero-image:not(:first-child) {
+    opacity: 0;
+  }
+
+  .hero-gradient-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 144px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+
+/* CSS for section section:Products */
+.products-section {
+    padding-top: 34px;
+    padding-bottom: 40px;
+  }
+
+  .products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+
+  .products-title {
+    font-family: var(--font-primary);
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .category-filters {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .filter-btn {
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 8px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  .filter-btn.active,
+  .filter-btn:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverted);
+    border-color: var(--color-primary);
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 48px 35px;
+  }
+
+  .product-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-image {
+    width: 100%;
+    height: 304px;
+    object-fit: cover;
+    background-color: #f0f0f0;
+    margin-bottom: 16px;
+  }
+
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .product-category {
+    align-self: flex-start;
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 2px 12px;
+    border-radius: 23px;
+  }
+
+  .product-name {
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.25;
+    min-height: 50px; /* To align cards with different title lengths */
+  }
+
+  .product-price {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    font-weight: 700;
+    color: var(--color-text);
+  }
+
+  .price-currency {
+    font-size: 27px;
+    line-height: 36px;
+  }
+
+  .price-amount {
+    font-size: 34px;
+    line-height: 41px;
+  }
+
+  .product-condition {
+    color: var(--color-text-light);
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  @media (max-width: 768px) {
+    .products-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+/* CSS for section section:Footer */
+.site-footer {
+    background-color: var(--color-primary);
+    color: var(--color-text-inverted);
+    padding: 24px 0;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-title {
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .social-links a img {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.2s;
+  }
+  
+  .social-links a:hover img {
+    opacity: 0.8;
+  }
+
+  .footer-bottom {
+    margin-top: 24px;
+    padding-top: 17px;
+    border-top: 1px solid #1e2939;
+  }
+
+  .copyright-text {
+    color: #99a1af;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="page-wrapper">
+    <div class="header-container">
+      <img src="images/0_243.svg" alt="Logo" class="header-logo">
+      <h1 class="header-title">VENDO TODO POR MUDANZA</h1>
+    </div>
+  </div>
+</header>
+<section id="hero" class="hero-section">
+  <!--merged image-->
+  <div class="hero-image-container">
+    <img src="images/43812222ba71b06b1055e1ffd1339abcef73514d.png" alt="Hero background image 1" class="hero-image">
+    <img src="images/a0e52020b87dd8e0d5b68997021989cf8849207a.png" alt="Hero background image 2" class="hero-image">
+    <img src="images/1e2bf353ddf0480b6efd5381b62cef7970efe1a9.png" alt="Hero background image 3" class="hero-image">
+    <img src="images/3a74cb34481b369a4a26c802bb4968dc25ae12b7.png" alt="Hero background image 4" class="hero-image">
+  </div>
+  <div class="hero-gradient-overlay"></div>
+</section>
+<main id="products" class="products-section">
+  <div class="page-wrapper">
+    <div class="products-header">
+      <h2 class="products-title">Productos</h2>
+      <nav class="category-filters">
+        <button class="filter-btn active">Todos</button>
+        <button class="filter-btn">Muebles</button>
+        <button class="filter-btn">Sonido & Electrónica</button>
+        <button class="filter-btn">Instrumentos Musicales</button>
+      </nav>
+    </div>
+
+    <div class="product-grid">
+      <article class="product-card">
+        <img src="images/f2572087e9441e2d942966a9613fe8a3238e681c.png" alt="Fender USA Stratocaster - 1979" class="product-image">
+        <div class="product-info">
+          <span class="product-category">INSTRUMENTOS MUSICALES</span>
+          <h3 class="product-name">Fender USA Stratocaster - 1979</h3>
+          <div class="product-price">
+            <span class="price-currency">u$d</span>
+            <span class="price-amount">3.000</span>
+          </div>
+          <p class="product-condition">Medium Relic</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img src="images/559697467ebc392403f13286a82d30a71b78548d.png" alt="Ibanez Hollow Body - AF151F 2014" class="product-image">
+        <div class="product-info">
+          <span class="product-category">INSTRUMENTOS MUSICALES</span>
+          <h3 class="product-name">Ibanez Hollow Body - AF151F 2014</h3>
+          <div class="product-price">
+            <span class="price-currency">u$d</span>
+            <span class="price-amount">1.200</span>
+          </div>
+          <p class="product-condition">Como nuevo</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img src="images/559697467ebc392403f13286a82d30a71b78548d.png" alt="Pedal de Distorsion “La Grange” - BOGNER" class="product-image">
+        <div class="product-info">
+          <span class="product-category">INSTRUMENTOS MUSICALES</span>
+          <h3 class="product-name">Pedal de Distorsion “La Grange” - BOGNER</h3>
+          <div class="product-price">
+            <span class="price-currency">u$d</span>
+            <span class="price-amount">350</span>
+          </div>
+          <p class="product-condition">Usado en muy buen estado</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img src="images/559697467ebc392403f13286a82d30a71b78548d.png" alt="Pedal BOSS Distortion" class="product-image">
+        <div class="product-info">
+          <span class="product-category">INSTRUMENTOS MUSICALES</span>
+          <h3 class="product-name">Pedal BOSS Distortion</h3>
+          <div class="product-price">
+            <span class="price-currency">$</span>
+            <span class="price-amount">120.000</span>
+          </div>
+          <p class="product-condition">Usado</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img src="images/559697467ebc392403f13286a82d30a71b78548d.png" alt="Pedal Reverb Spark - MOOER" class="product-image">
+        <div class="product-info">
+          <span class="product-category">INSTRUMENTOS MUSICALES</span>
+          <h3 class="product-name">Pedal Reverb Spark - MOOER</h3>
+          <div class="product-price">
+            <span class="price-currency">$</span>
+            <span class="price-amount">120.000</span>
+          </div>
+          <p class="product-condition">Usado</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img src="images/559697467ebc392403f13286a82d30a71b78548d.png" alt="Amplificador Peavey Rage 158 Negro" class="product-image">
+        <div class="product-info">
+          <span class="product-category">INSTRUMENTOS MUSICALES</span>
+          <h3 class="product-name">Amplificador Peavey Rage 158 Negro</h3>
+          <div class="product-price">
+            <span class="price-currency">$</span>
+            <span class="price-amount">290</span>
+          </div>
+          <p class="product-condition">Usado en buen estado</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img src="images/559697467ebc392403f13286a82d30a71b78548d.png" alt="Micrófono Condenser Senheiser C1" class="product-image">
+        <div class="product-info">
+          <span class="product-category">Electrónica</span>
+          <h3 class="product-name">Micrófono Condenser Behringer C1</h3>
+          <div class="product-price">
+            <span class="price-currency">$</span>
+            <span class="price-amount">100.000</span>
+          </div>
+          <p class="product-condition">Usado en muy buen estado</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img src="images/559697467ebc392403f13286a82d30a71b78548d.png" alt="Mueble Vitrina para bandeja de vinilos." class="product-image">
+        <div class="product-info">
+          <span class="product-category">Electrónica</span>
+          <h3 class="product-name">Mueble Vitrina para bandeja de vinilos.</h3>
+          <div class="product-price">
+            <span class="price-currency">$</span>
+            <span class="price-amount">150000</span>
+          </div>
+          <p class="product-condition">Usado en muy buen estado</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img src="images/559697467ebc392403f13286a82d30a71b78548d.png" alt="Interfaz De Audio Focusrite Scarlett 2i2 2da G Fotos Reales Rojo" class="product-image">
+        <div class="product-info">
+          <span class="product-category">Electrónica</span>
+          <h3 class="product-name">Interfaz De Audio Focusrite Scarlett 2i2 2da G Fotos Reales Rojo</h3>
+          <div class="product-price">
+            <span class="price-currency">$</span>
+            <span class="price-amount">200000</span>
+          </div>
+          <p class="product-condition">Usado en muy buen estado</p>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img src="images/559697467ebc392403f13286a82d30a71b78548d.png" alt="Sofá 2 cuerpos gabardina" class="product-image">
+        <div class="product-info">
+          <span class="product-category">muebles</span>
+          <h3 class="product-name">Sofá 2 cuerpos gabardina</h3>
+          <div class="product-price">
+            <span class="price-currency">$</span>
+            <span class="price-amount">280.000</span>
+          </div>
+          <p class="product-condition">Usado en muy buen estado</p>
+        </div>
+      </article>
+      
+      
+    </div>
+  </div>
+</main>
+<footer id="contact" class="site-footer">
+  <div class="page-wrapper">
+    <div class="footer-content">
+      <h3 class="footer-title">Contactos</h3>
+      <div class="social-links">
+        <a href="#" aria-label="WhatsApp">
+          <img src="images/icon_wp.png" alt="WhatsApp Icon">
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="copyright-text">© 2023 Vendo Todo Por Mudanza. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
